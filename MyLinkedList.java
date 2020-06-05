@@ -77,5 +77,36 @@ public class MyLinkedList {
 		
 		return current.data;
 	}
+	
+	// add new node at given position
+	public void addNode(int pos, int data) {
+		Node addNode = new Node(data);
+		
+		if(head == null) {
+			addNode(data);
+		}
+		
+		//int count = 0;
+		Node current = head;
+		while(--pos != 0) {
+			
+			current = current.next;
+			//count++;
+			
+		}
+		addNode.next = current.next;
+		current.next = addNode;
+	}
+	
+		// remove node from given pos
+	public void remove(int pos) {
+		Node current = head;
+		
+		while(--pos != 0) {
+			current = current.next;
+		}
+		current.next = current.next.next;
+	}
+	
 	}
 
