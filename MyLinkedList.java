@@ -62,7 +62,7 @@ public class MyLinkedList {
 		while(current.next.next != null) {
 			current = current.next;
 		}
-		Node toremove = current;
+		Node toremove = current.next;
 		current.next = null;
 		
 		return toremove.data;
